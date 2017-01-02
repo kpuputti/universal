@@ -44,13 +44,13 @@ module.exports = Object.assign({}, clientProdConfig, {
   target: 'node',
   entry: [
     require.resolve('./polyfills'),
-    paths.appJs
+    paths.routesJs
   ],
   output: {
     path: paths.appBuild,
     filename: 'server-bundle.js',
     publicPath,
-    library: 'App',
+    library: 'Routes',
     libraryTarget: 'commonjs'
   },
   module: {
