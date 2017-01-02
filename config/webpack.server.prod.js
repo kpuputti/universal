@@ -43,14 +43,12 @@ fs.readdirSync(paths.appNodeModules)
 module.exports = Object.assign({}, clientProdConfig, {
   target: 'node',
   entry: [
-    require.resolve('./polyfills'),
     paths.routesJs
   ],
   output: {
     path: paths.appBuild,
     filename: 'server-bundle.js',
     publicPath,
-    library: 'Routes',
     libraryTarget: 'commonjs'
   },
   module: {
